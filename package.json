@@ -1,19 +1,17 @@
 {
   "name": "sportsfansynthesizer",
-  "version": "1.0.0",
-  "description": "An app that fetches what should be your new favourite team in a selection of leagues around the world, and returns it to you",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michael-lowe-nz/sportsFanSynthesizer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michael-lowe-nz/sportsFanSynthesizer/issues"
-  },
-  "homepage": "https://github.com/michael-lowe-nz/sportsFanSynthesizer#readme"
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "hbs": "~4.0.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  }
 }
