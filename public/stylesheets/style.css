@@ -1,8 +1,43 @@
+/** BASE STYLES **/
+
 body {
-  padding: 50px;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: grey;
+  color: #b2abab;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+/** NAV BAR **/
+nav {
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.headLine {
+  font-size: 2em;
+}
+
+.nav-list {
+  display: flex;
 }
