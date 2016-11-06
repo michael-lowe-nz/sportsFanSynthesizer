@@ -28,16 +28,23 @@ nav {
   background-color: white;
   color: black;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .nav-bar {
   display: flex;
+  flex: 1;
 }
 
 .headLine {
   font-size: 2em;
 }
 
+ul li {
+  padding: 0 50px;
+}
+
 .nav-list {
   display: flex;
+  text-align: right;
 }
