@@ -5,14 +5,7 @@ var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log("At / route")
-  getAllTeamsFrom('superRugbyTeams')
-    .then(function(teams){
-      res.render('index', {teams: teams})
-    })
-    .catch(function(err){
-      console.log(err)
-    })
+  res.render('index')
 });
 
 router.get('/showTeam', function(req, res, next){
