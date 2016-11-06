@@ -2,7 +2,7 @@
   <div class="container nav-bar">
     <a href="#">
       <p class="headline">sports fan synthesizer.</p>
-      <img>logo</img>
+      <!-- <img>logo</img> -->
     </a>
     <ul class="nav-list">
       <li><a href="#">app</li>
@@ -10,3 +10,32 @@
     </ul>
   </div>
 </nav>
+<div class="main-area">
+  <div class="container">
+    <div class="queryBox">
+      <h1>Tell us some things about you</h1>
+      <form action="/showTeam" method="get">
+        <select name="league">
+          <option value="nbaTeams">NBA</option>
+          <option value="superRugbyTeams">Super Rugby</option>
+        </select>
+        <select name="Colour">
+          <option value="black">black</option>
+          <option value="blue">blue</option>
+          <option value="red">red</option>
+          <option value="yellow">yellow</option>
+          <option value="maroon">maroon</option>
+          <option value="white">white</option>
+        </select>
+      </form>
+    </div>
+    <div class="resultBox">
+      <h2>{{title}}</h2>
+      <h2>Teams!</h2>
+      {{#each teams}}
+      <h2>{{this.teamName}}</h2>
+      <h3>{{this.location}}</h3>
+      {{/each}}
+    </div>
+  </div>
+</div>

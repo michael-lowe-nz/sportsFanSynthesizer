@@ -8,5 +8,5 @@ module.exports = {
 }
 
 function getAllTeamsFrom(league) {
-
+  return knex(league)
 }
