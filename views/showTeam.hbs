@@ -1,18 +1,26 @@
-<nav>
-  <div class="container nav-bar">
-    <a href="../">
-      <p class="headline">sports fan synthesizer.</p>
-      <!-- <img>logo</img> -->
-    </a>
-    <ul class="nav-list">
-      <li><a href="../">app</a></li>
-      <li><a href="../about">about</a></li>
-    </ul>
+<div class="main-area">
+  <div class="queryBox">
+    <h1>Tell us some things about you</h1>
+    <form action="/showTeam" method="get">
+      <select name="league">
+        <option value="nbaTeams">NBA</option>
+        <option value="superRugbyTeams">Super Rugby</option>
+      </select>
+      <select name="Colour" label="Favourite Colour">
+        <option value="black">black</option>
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="maroon">maroon</option>
+        <option value="white">white</option>
+      </select>
+      <input type="submit" value="Submit"></input>
+    </form>
   </div>
-</nav>
-<div class="resultBox">
-  <h2>{{teamName}}</h2>
-  <h3>{{location}}</h3>
-  <p>This team's primary colour is {{primaryColour}} and its secondary colour is {{secondaryColour}}</p>
-  <img src="http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif">
+  <div class="resultBox">
+    <h2>{{teamName}}</h2>
+    <h3>{{location}}</h3>
+    <p>This team's primary colour is {{primaryColour}} and its secondary colour is {{secondaryColour}}</p>
+    <img src="http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif">
+  </div>
 </div>
