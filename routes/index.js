@@ -3,6 +3,8 @@ var router = express.Router();
 
 var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
 
+var unirest = require('unirest')
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index')
@@ -17,5 +19,7 @@ router.get('/showTeam', function(req, res, next){
       res.render('showTeam', team)
     })
 })
+
+
 
 module.exports = router;

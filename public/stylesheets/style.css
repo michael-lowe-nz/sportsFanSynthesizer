@@ -4,8 +4,8 @@ body {
   padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: grey;
-  color: #b2abab;
-  margin: 0;
+  color: black;
+  margin: 0;;
 }
 
 .container {
@@ -28,6 +28,12 @@ ul {
   margin: 0 auto;
   color: black;
 }
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
 
 /** QUERY BOX **/
 
@@ -64,4 +70,16 @@ ul li {
 .nav-list {
   display: flex;
   text-align: right;
+}
+
+/** Show Team Page **/
+
+.resultBox {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 80px 20px;
+  text-align: center;
 }
