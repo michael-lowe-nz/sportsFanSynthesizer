@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
-var incrementViews = ('../db/incrementViews')
+var incrementViews = require('../db/incrementViews')
 
 var unirest = require('unirest')
 
@@ -15,13 +15,9 @@ router.get('/showTeam', function(req, res, next){
   getAllTeamsFrom(req.query.league)
     .then(function(teams){
       team = teams[Math.floor(Math.random()*teams.length)]
+      incrementViews(req.query.league, team.teamName)
+      console.log(req.query.league, team.teamName, team.views)
       res.render('showTeam', team)
-      // incrementViews(req.query.league, team.teamName)
-      //   .then(function(point){
-      //     console.log("in increment views promise")
-      //     res.render('showTeam', team)
-      //   })
-      //   .catch(function(err){console.log(err)})
     })
     .catch(function(err){
       console.log(err)

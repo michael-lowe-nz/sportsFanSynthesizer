@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string("primaryColour")
     table.string("secondaryColour")
     table.integer("views").defaultTo(0)
+    table.string("imageURL")
   })
 };
 

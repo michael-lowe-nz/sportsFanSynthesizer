@@ -3,8 +3,11 @@ var knexConfig = require('../knexfile')[process.env.NODE_ENV || 'development']
 
 var knex = Knex(knexConfig)
 
-module.exports = function (league, teamName) {
+module.exports = incrementViews
+
+function incrementViews(league, id) {
+  console.log(league, id)
   return knex(league)
-    .where('teamName', '=', teamName)
-    .increment('views', 1)
+    .where('id', '=', id)
+    .increment('views', '+', 1)
 }

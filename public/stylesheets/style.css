@@ -1,9 +1,15 @@
 /** BASE STYLES **/
+* {
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
 
 body {
   padding: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #cae1e6;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  background-color: #E3E7E8;
   color: black;
   margin: 0;;
 }
@@ -50,9 +56,11 @@ img {
   background-color: white;
   /*width: 50%;*/
   margin: 30px;
-  min-height: 280px;
+  margin-top: 100px;
+  min-height: 320px;
   border-radius: 20px;
   /*padding: 80px 0;*/
+  padding-top: 10px;
   text-align: center;
   flex: 1;
 }
@@ -72,6 +80,7 @@ nav {
   color: black;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1.5em;
 }
 
 .nav-bar {
