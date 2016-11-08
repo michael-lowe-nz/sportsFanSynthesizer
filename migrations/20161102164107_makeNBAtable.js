@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
     table.string("location")
     table.string("primaryColour")
     table.string("secondaryColour")
+    table.integer("views").defaultTo(0)
   })
 };
 

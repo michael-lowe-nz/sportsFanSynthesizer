@@ -1,6 +1,6 @@
 <div class="main-area">
   <div class="queryBox">
-    <h1>Tell us some things about you</h1>
+    <h1 class="margined-text">Tell us some things about you</h1>
     <form action="/showTeam" method="get">
       <select name="league">
         <option value="nbaTeams">NBA</option>
@@ -18,9 +18,10 @@
     </form>
   </div>
   <div class="resultBox">
-    <h2>{{teamName}}</h2>
-    <h3>{{location}}</h3>
+    <h2 class="margined-text">{{teamName}}</h2>
+    <h3 class="margined-text">{{location}}</h3>
     <p>This team's primary colour is {{primaryColour}} and its secondary colour is {{secondaryColour}}</p>
     <img src="http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif">
+    <h3>{{teamName}} fans synthesized: {{views}}</h3>
   </div>
 </div>
