@@ -17,6 +17,7 @@ router.get('/showTeam', function(req, res, next){
       team = teams[Math.floor(Math.random()*teams.length)]
       incrementViews(req.query.league, team.teamName)
       .then(function(){
+        team.views ++
         res.render('showTeam', team)
       })
       .catch(function(err){console.log(err)})
