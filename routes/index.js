@@ -21,7 +21,7 @@ router.get('/showTeam', function(req, res, next){
         team.views ++
         getSumOfViews(req.query.league)
           .then(function(totalViews){
-            team.totalViews = totalViews[0]['sum("views")']
+            team.totalViews = totalViews[0]['sum']
             console.log(team)
             console.log(totalViews)
             res.render('showTeam', team)
