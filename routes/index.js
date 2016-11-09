@@ -6,7 +6,7 @@ var incrementViews = require('../db/incrementViews')
 var getSumOfViews = require('../db/getSumOfViews')
 
 var unirest = require('unirest')
-var confusionFixer = process.NODE_ENV ? 'sum' : 'sum("views")'
+var confusionFixer = process.NODE_ENV.PORT ? 'sum' : 'sum("views")'
 console.log("This is env", process.NODE_ENV)
 
 /* GET home page. */
