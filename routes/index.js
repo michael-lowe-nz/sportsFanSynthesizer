@@ -3,6 +3,7 @@ var router = express.Router();
 
 var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
 var incrementViews = require('../db/incrementViews')
+var getSumOfViews = require('../db/getSumOfViews')
 
 var unirest = require('unirest')
 
@@ -18,7 +19,14 @@ router.get('/showTeam', function(req, res, next){
       incrementViews(req.query.league, team.teamName)
       .then(function(){
         team.views ++
-        res.render('showTeam', team)
+        getSumOfViews(req.query.league)
+          .then(function(totalViews){
+            team.totalViews = totalViews[0]['sum("views")']
+            console.log(team)
+            console.log(totalViews)
+            res.render('showTeam', team)
+          })
+          .catch(function(err){console.log(err)})
       })
       .catch(function(err){console.log(err)})
     })

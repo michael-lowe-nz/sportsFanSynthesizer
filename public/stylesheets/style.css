@@ -44,6 +44,14 @@ ul {
   align-items: center;
 }
 
+.bottom {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 30px;
+}
+
 img {
   width: 150px;
   height: 150px;
