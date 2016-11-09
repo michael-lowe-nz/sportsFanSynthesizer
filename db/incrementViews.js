@@ -5,9 +5,9 @@ var knex = Knex(knexConfig)
 
 module.exports = incrementViews
 
-function incrementViews(league, id) {
-  console.log(league, id)
+function incrementViews(league, teamName) {
+  console.log(league, teamName)
   return knex(league)
-    .where('id', '=', id)
+    .where('teamName', '=', teamName)
     .increment('views', '+', 1)
 }

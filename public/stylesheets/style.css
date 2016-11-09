@@ -85,11 +85,11 @@ nav {
 
 .nav-bar {
   display: flex;
-  flex: 1;
 }
 
 .headLine {
   font-size: 2em;
+  padding-right: 200px;
 }
 
 ul li {
@@ -99,6 +99,7 @@ ul li {
 .nav-list {
   display: flex;
   text-align: right;
+  float:right;
 }
 
 
