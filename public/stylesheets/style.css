@@ -36,12 +36,14 @@ ul {
 .main-area {
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 20px;
   color: black;
   max-width: 1060px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 0;
 }
 
 .bottom {
