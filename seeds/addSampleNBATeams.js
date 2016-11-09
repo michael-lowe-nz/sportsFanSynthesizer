@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
       return Promise.all([
         // Inserts seed entries
         knex('nbaTeams').insert({id: 1, teamName: 'Atlanta Hawks', primaryColour: "red", secondaryColour: "navy", imageURL: "http://i.cdn.turner.com/drp/nba/hawks/sites/default/files/primary.jpg"}),
-        knex('nbaTeams').insert({id: 2, teamName: 'Boston Celtics', primaryColour: "green", secondaryColour: "white", imageURL: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Chicago_Bulls_logo.svg/475px-Chicago_Bulls_logo.svg.png"}),
+        knex('nbaTeams').insert({id: 2, teamName: 'Boston Celtics', primaryColour: "green", secondaryColour: "white", imageURL: "http://vignette3.wikia.nocookie.net/logopedia/images/d/d2/BostonCeltics80slogo.gif/revision/latest?cb=20100915180201"}),
         knex('nbaTeams').insert({id: 3, teamName: 'Cleveland Cavaliers', primaryColour: "maroon", secondaryColour: "blue", imageURL: "https://www.seeklogo.net/wp-content/uploads/2015/11/cleveland-cavaliers-logo-vector-download.jpg"}),
         knex('nbaTeams').insert({id: 4, teamName: 'Chicago Bulls', primaryColour: "red", secondaryColour: "white", imageURL: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Chicago_Bulls_logo.svg/475px-Chicago_Bulls_logo.svg.png"}),
         knex('nbaTeams').insert({id: 5, teamName: 'Golden State Warriors', primaryColour: "blue", secondaryColour: "yellow", imageURL:"http://www.underconsideration.com/brandnew/archives/warriors_primaryLogo.jpg"}),
