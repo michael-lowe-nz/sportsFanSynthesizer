@@ -5,7 +5,7 @@ var knex = Knex(knexConfig)
 
 module.exports = incrementViews
 
-function incrementViews(league, teamName) {
+function incrementViews (league, teamName) {
   console.log(league, teamName)
   return knex(league)
     .where('teamName', '=', teamName)
