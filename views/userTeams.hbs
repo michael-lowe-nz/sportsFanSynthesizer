@@ -1,0 +1,10 @@
+<div class="container main">
+  <h1>Showing a Single Team</h1>
+  {{#each teams}}
+    <div class="half-box">
+      <h2 class="margined-text">{{teamName}}</h2>
+      <img src="{{imageURL}}">
+      <p>{{name}}</p>
+    </div>
+  {{/each}}
+</div>
