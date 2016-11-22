@@ -42,8 +42,18 @@ router.get('/showTeam', function (req, res, next) {
 router.get('/users/:id', function (req, res, next) {
   console.log('In the users/id route')
   console.log('Req.params.id is: ', req.params.id)
-  res.send('hello')
-  
+  getUsersTeams(req.params.id)
+    .then(function(teamsArray){
+      console.log("Teamsarray:", teamsArray)
+      res.render('userTeams', {teams: teamsArray})
+    })
+    .catch(function(err){
+      console.log(err)
+    })
 })
+
+// router.post('/users', function (req, res) {
+//   addTeamToUser
+// })
 
 module.exports = router

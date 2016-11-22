@@ -1,10 +1,11 @@
 <div class="container main">
-  <h1>Showing a Single Team</h1>
+  <h1>Showing User's Team</h1>
+</div>
+<div class="container main">
   {{#each teams}}
-    <div class="half-box">
-      <h2 class="margined-text">{{teamName}}</h2>
-      <img src="{{imageURL}}">
-      <p>{{name}}</p>
+    <div class="halfBox">
+      <h2 class="margined-text">{{this.teamName}}</h2>
+      <img src="{{this.imageURL}}">
     </div>
   {{/each}}
 </div>
