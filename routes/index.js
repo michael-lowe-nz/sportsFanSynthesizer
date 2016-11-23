@@ -5,6 +5,7 @@ var getAllTeamsFrom = require('../db/getAllTeamsFrom')
 var incrementViews = require('../db/incrementViews')
 var getSumOfViews = require('../db/getSumOfViews')
 var getUsersTeams = require('../db/getUsersTeams')
+var addTeamToUser = require('../db/addTeamToUser')
 
 var confusionFixer = process.env.NODE_ENV ? 'sum' : 'sum("views")'
 
@@ -33,6 +34,18 @@ router.get('/showTeam', function (req, res, next) {
       .catch(function (err) {
         console.log(err)
       })
+    })
+    .catch(function (err) {
+      console.log(err)
+    })
+})
+
+router.post('/users', function (req, res, next){
+  console.log('Posting to users')
+  console.log('Req to users:', req.body.teamID)
+  addTeamToUser(req.params.teamID, 'nbaTeams', 10)
+    .then(function () {
+      res.redirect('../')
     })
     .catch(function (err) {
       console.log(err)

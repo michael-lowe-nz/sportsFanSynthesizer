@@ -10,11 +10,6 @@
       <select name="Colour" label="Favourite Colour">
         <option selected disabled>Choose a Colour</option>
         <option value="black">black</option>
-        <option value="blue">blue</option>
-        <option value="red">red</option>
-        <option value="yellow">yellow</option>
-        <option value="maroon">maroon</option>
-        <option value="white">white</option>
       </select>
       <select name="location" label="Find your nearest team?">
         <option selected disabled>Find your nearest team?</option>
@@ -32,7 +27,12 @@
 </div>
 <div class="container">
   <div class="fullBox save">
-    <h3> Save this team</h3>
+    <form action='/users' method='post'>
+      <input type='text' name='teamID' value='{{id}}'>
+      <input type='submit' value='Submit'>
+        <h3> Save this team</h3>
+      </select>
+    </form>
   </div>
 </div>
 <div class="container">
