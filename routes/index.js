@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 
-var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
+var getAllTeamsFrom = require('../db/getAllTeamsFrom')
 var incrementViews = require('../db/incrementViews')
 var getSumOfViews = require('../db/getSumOfViews')
 
