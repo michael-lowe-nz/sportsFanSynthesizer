@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 
-var getAllTeamsFrom = require('../db/getAllTeamsFrom').getAllTeamsFrom
+var getAllTeamsFrom = require('../db/getAllTeamsFrom')
 var incrementViews = require('../db/incrementViews')
 var getSumOfViews = require('../db/getSumOfViews')
 
@@ -20,7 +20,7 @@ router.get('/showTeam', function (req, res, next) {
       .then(function () {
         team.views ++
         getSumOfViews(req.query.league)
-          .then(function (totalViews) {
+          .then(function (totalViews) {g
             team.totalViews = totalViews[0][confusionFixer]
             console.log(team)
             console.log(totalViews)
