@@ -20,7 +20,7 @@ router.get('/showTeam', function (req, res, next) {
       .then(function () {
         team.views ++
         getSumOfViews(req.query.league)
-          .then(function (totalViews) {
+          .then(function (totalViews) {g
             team.totalViews = totalViews[0][confusionFixer]
             console.log(team)
             console.log(totalViews)
